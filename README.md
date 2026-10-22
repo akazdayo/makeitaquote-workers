@@ -95,9 +95,16 @@ pnpm register
 - **本番CPU制限はローカルの検査だけでは保証できません。** Workers FreeのCPU・リクエスト上限やDiscordのレート制限は引き続き適用されます。公開後はCloudflare MetricsでCPU時間・エラーを確認してください。有料プランを要求する設定や有料サービスのバインディングはありません。
 - アプリのリクエストログは無効です。診断を追加する場合も本文・Interaction token・署名・Bot tokenをログに出さないでください。
 
-## フォントと公式仕様
+## ライセンス
 
-同梱フォントと変換後フォントデータのライセンスはSIL Open Font License 1.1です。元データ・著作権表示・ライセンスは`assets/FONT-NOTICE.md`と`assets/FONT-LICENSE.txt`を参照してください。生成画像にこのフォントのライセンスは適用されません。
+このプロジェクト独自のアプリ本体・スクリプト・設定・ドキュメント・アイコンはMITライセンスです。全文は`LICENSE`を参照してください。第三者のコードやフォントをMITに再ライセンスするものではありません。
+
+- 実行時の依存ライブラリ`fast-png`・`fflate`・`iobuffer`もMITです。それぞれの著作権表示とライセンス全文は`THIRD_PARTY_NOTICES.md`に記載しています。
+- 同梱フォント`assets/quote-font.bdf.gz`と変換後の`src/font.bin`は、MITではなくSIL Open Font License 1.1です。ビルド成果物内のフォントデータも同じ扱いです。元データ・著作権表示・ライセンスは`assets/FONT-NOTICE.md`と`assets/FONT-LICENSE.txt`を参照してください。
+- ソースやフォントデータ付きのビルド成果物を再配布するときは、`LICENSE`・`THIRD_PARTY_NOTICES.md`・`assets/FONT-NOTICE.md`・`assets/FONT-LICENSE.txt`も添付してください。`dist/`への自動コピーは行いません。
+- 生成画像にこのフォントのライセンスは適用されません。ただし、引用文やアバターなど第三者の素材の権利を許諾するものではありません。
+
+## 公式仕様
 
 - [Discord: Application commands](https://docs.discord.com/developers/interactions/application-commands)
 - [Discord: Receiving and responding](https://docs.discord.com/developers/interactions/receiving-and-responding)
