@@ -1,0 +1,27 @@
+{
+  "name": "makeitaquote-workers",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.9.0",
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "fonts": "node scripts/build-font.mjs",
+    "dev": "pnpm fonts && wrangler dev",
+    "types": "wrangler types",
+    "typecheck": "pnpm types && tsc --noEmit",
+    "build": "pnpm fonts && wrangler deploy --dry-run --outdir dist",
+    "deploy": "pnpm fonts && wrangler deploy",
+    "register": "node --env-file=.dev.vars scripts/register-commands.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.0.0"
+  },
+  "dependencies": {
+    "fast-png": "^8.0.0"
+  }
+}

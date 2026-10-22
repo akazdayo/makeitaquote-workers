@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "makeitaquote-workers",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-22",
+  "workers_dev": true,
+  "secrets": {
+    "required": ["DISCORD_APPLICATION_ID", "DISCORD_PUBLIC_KEY"]
+  },
+  "rules": [{ "type": "Data", "globs": ["**/*.bin"], "fallthrough": true }],
+  "observability": { "enabled": false }
+}
